@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { ChevronRight, ChevronLeft, Loader2, Leaf, Heart, Zap, Star, CheckCircle, ArrowRight } from 'lucide-react';
+import { ChevronLeft, Leaf, Heart, Zap, Star, CheckCircle, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Types for better TypeScript support
@@ -504,7 +504,7 @@ const SaabhiQuiz: React.FC = () => {
                         <div className="flex items-center justify-between relative z-10">
                           <div className="flex-1 pr-4">
                             <p className="text-green-800 font-medium group-hover:text-green-900 transition-colors leading-relaxed text-sm md:text-base lg:text-lg">
-                               &nbsp;&nbsp;{option.text}
+                             {option.text}
                             </p>
                           </div>
                           <motion.div

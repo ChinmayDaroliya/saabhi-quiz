@@ -9,7 +9,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true,
+  // swcMinify: true,
   experimental: {
     optimizeCss: true,
   },
