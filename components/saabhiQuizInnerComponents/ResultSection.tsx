@@ -11,7 +11,7 @@ export const ResultSection: React.FC<{
   return (
     <motion.main 
       key="result"
-      className="w-full h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-green-300 scrollbar-track-green-50 px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-12 pb-20 sm:pb-6 lg:pb-12"
+      className="w-full h-screen min-h-[150vh] overflow-y-auto scrollbar-thin scrollbar-thumb-green-300 scrollbar-track-green-50 px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-12 pb-20 sm:pb-6 lg:pb-12"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6 }}
@@ -155,7 +155,7 @@ export const ResultSection: React.FC<{
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.5 }}
               >
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-10 shadow-inner">
+                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-10 shadow-inner ">
                   {/* <AyurvedicBottle className="mx-auto mb-3 sm:mb-4 lg:mb-8" animate /> */}
                   <h5 className="text-green-800 font-bold text-sm sm:text-lg lg:text-xl mb-1 sm:mb-2 lg:mb-3">
                     Premium Ayurvedic Formula
