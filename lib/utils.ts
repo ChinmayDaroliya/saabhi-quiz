@@ -1,12 +1,13 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-/**
- * cn()
- * Utility to merge Tailwind + conditional classes
- * Example:
- *   cn("px-4", isActive && "bg-green-500")
- */
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
+}
+
+// Utility function for analytics tracking
+export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', eventName, properties);
+  }
 }
