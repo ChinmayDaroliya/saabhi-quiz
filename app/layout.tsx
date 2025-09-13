@@ -1,10 +1,10 @@
-import {Inter} from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
-import type {Metadata} from 'next'
+import type { Metadata } from 'next'
 
-const inter = Inter({subsets:['latin']})
+const inter = Inter({ subsets: ['latin'] })
 
-export const metadata:Metadata ={
+export const metadata: Metadata = {
   title: 'Saabhi Wellness - Personalized Ayurvedic Quiz',
   description: 'Discover your perfect Ayurvedic wellness solution with our personalized quiz. Get recommendations tailored to your lifestyle and health goals.',
   keywords: 'ayurvedic, wellness, personalized, quiz, health, natural, saabhi',
@@ -19,7 +19,15 @@ export const metadata:Metadata ={
     index: true,
     follow: true,
   },
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  // REMOVED: viewport should not be in metadata
+}
+
+// ADD THIS: New way to export viewport in Next.js 13+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  // You can add more viewport properties if needed
 }
 
 export default function RootLayout({
