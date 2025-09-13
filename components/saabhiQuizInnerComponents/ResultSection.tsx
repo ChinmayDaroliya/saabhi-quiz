@@ -5,7 +5,7 @@ import { ResultData } from '@/interfaces/Interface';
 
 // Extracted Result Section Component
 export const ResultSection: React.FC<{
-  result: ResultData;
+  result: ResultData | null;
   resetQuiz: () => void;
 }> = ({ result, resetQuiz }) => {
   return (
@@ -50,7 +50,7 @@ export const ResultSection: React.FC<{
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            Based on your responses, here's your personalized recommendation
+            Based on your responses, here your personalized recommendation
           </motion.p>
         </motion.div>
 
