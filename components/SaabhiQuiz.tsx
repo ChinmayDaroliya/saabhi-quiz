@@ -35,7 +35,7 @@ interface ResultData {
 const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "What's your current lifestyle like?",
+    question: "What&apos;s your current lifestyle like?",
     options: [
       { 
         id: 'active', 
@@ -61,7 +61,7 @@ const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 2,
-    question: "What's your primary health goal?",
+    question: "What&apos;s your primary health goal?",
     options: [
       { 
         id: 'energy', 
@@ -113,7 +113,7 @@ const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 4,
-    question: "What's your preferred way to take supplements?",
+    question: "What&apos;s your preferred way to take supplements?",
     options: [
       { 
         id: 'tablets', 
@@ -132,7 +132,7 @@ const quizQuestions: QuizQuestion[] = [
       },
       { 
         id: 'mixed', 
-        text: 'I\'m open to trying different forms', 
+        text: 'I&apos;m open to trying different forms', 
         score: { performance: 2, wellness: 2, stress: 2, digestive: 2 } 
       }
     ]
