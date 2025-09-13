@@ -38,23 +38,23 @@ const quizQuestions: QuizQuestion[] = [
     question: "What&apos;s your current lifestyle like?",
     options: [
       { 
-        id: 'active', 
-        text: 'Very active - I exercise regularly and eat healthy', 
+        id: "active", 
+        text: "Very active - I exercise regularly and eat healthy", 
         score: { performance: 3, wellness: 2, stress: 1, digestive: 1 } 
       },
       { 
-        id: 'moderate', 
-        text: 'Moderately active - I try to stay healthy but could do better', 
+        id: "moderate", 
+        text: "Moderately active - I try to stay healthy but could do better", 
         score: { performance: 2, wellness: 3, stress: 2, digestive: 2 } 
       },
       { 
-        id: 'sedentary', 
-        text: 'Mostly sedentary - I have a desk job and limited physical activity', 
+        id: "sedentary", 
+        text: "Mostly sedentary - I have a desk job and limited physical activity", 
         score: { performance: 1, wellness: 1, stress: 3, digestive: 2 } 
       },
       { 
-        id: 'stressed', 
-        text: 'High stress lifestyle with irregular eating and sleep patterns', 
+        id: "stressed", 
+        text: "High stress lifestyle with irregular eating and sleep patterns", 
         score: { performance: 1, wellness: 1, stress: 3, digestive: 3 } 
       }
     ]
@@ -64,23 +64,23 @@ const quizQuestions: QuizQuestion[] = [
     question: "What&apos;s your primary health goal?",
     options: [
       { 
-        id: 'energy', 
-        text: 'Boost energy and vitality naturally', 
+        id: "energy", 
+        text: "Boost energy and vitality naturally", 
         score: { performance: 3, wellness: 2, stress: 2, digestive: 1 } 
       },
       { 
-        id: 'stress', 
-        text: 'Reduce stress and improve mental clarity', 
+        id: "stress", 
+        text: "Reduce stress and improve mental clarity", 
         score: { performance: 1, wellness: 2, stress: 3, digestive: 1 } 
       },
       { 
-        id: 'digestion', 
-        text: 'Improve digestion and gut health', 
+        id: "digestion", 
+        text: "Improve digestion and gut health", 
         score: { performance: 1, wellness: 2, stress: 1, digestive: 3 } 
       },
       { 
-        id: 'overall', 
-        text: 'Overall wellness and immunity boost', 
+        id: "overall", 
+        text: "Overall wellness and immunity boost", 
         score: { performance: 2, wellness: 3, stress: 2, digestive: 2 } 
       }
     ]
@@ -90,23 +90,23 @@ const quizQuestions: QuizQuestion[] = [
     question: "How do you usually feel by afternoon?",
     options: [
       { 
-        id: 'energetic', 
-        text: 'Still energetic and focused', 
+        id: "energetic", 
+        text: "Still energetic and focused", 
         score: { performance: 3, wellness: 2, stress: 1, digestive: 1 } 
       },
       { 
-        id: 'tired', 
-        text: 'Slightly tired but manageable', 
+        id: "tired", 
+        text: "Slightly tired but manageable", 
         score: { performance: 2, wellness: 2, stress: 2, digestive: 2 } 
       },
       { 
-        id: 'drained', 
-        text: 'Drained and need caffeine boost', 
+        id: "drained", 
+        text: "Drained and need caffeine boost", 
         score: { performance: 1, wellness: 1, stress: 3, digestive: 2 } 
       },
       { 
-        id: 'sluggish', 
-        text: 'Sluggish with digestive discomfort', 
+        id: "sluggish", 
+        text: "Sluggish with digestive discomfort", 
         score: { performance: 1, wellness: 1, stress: 2, digestive: 3 } 
       }
     ]
@@ -116,23 +116,23 @@ const quizQuestions: QuizQuestion[] = [
     question: "What&apos;s your preferred way to take supplements?",
     options: [
       { 
-        id: 'tablets', 
-        text: 'Tablets - Quick and convenient', 
+        id: "tablets", 
+        text: "Tablets - Quick and convenient", 
         score: { performance: 2, wellness: 2, stress: 2, digestive: 2 } 
       },
       { 
-        id: 'juice', 
-        text: 'Natural juices - I enjoy the taste', 
+        id: "juice", 
+        text: "Natural juices - I enjoy the taste", 
         score: { performance: 2, wellness: 3, stress: 1, digestive: 3 } 
       },
       { 
-        id: 'oils', 
-        text: 'Oils for topical application', 
+        id: "oils", 
+        text: "Oils for topical application", 
         score: { performance: 1, wellness: 3, stress: 2, digestive: 1 } 
       },
       { 
-        id: 'mixed', 
-        text: 'I&apos;m open to trying different forms', 
+        id: "mixed", 
+        text: "I&apos;m open to trying different forms", 
         score: { performance: 2, wellness: 2, stress: 2, digestive: 2 } 
       }
     ]
@@ -142,23 +142,23 @@ const quizQuestions: QuizQuestion[] = [
     question: "When do you typically experience health issues?",
     options: [
       { 
-        id: 'morning', 
-        text: 'Morning sluggishness and low energy', 
+        id: "morning", 
+        text: "Morning sluggishness and low energy", 
         score: { performance: 1, wellness: 2, stress: 2, digestive: 3 } 
       },
       { 
-        id: 'work-stress', 
-        text: 'During stressful work periods', 
+        id: "work-stress", 
+        text: "During stressful work periods", 
         score: { performance: 2, wellness: 1, stress: 3, digestive: 1 } 
       },
       { 
-        id: 'seasonal', 
-        text: 'Seasonal changes affect my immunity', 
+        id: "seasonal", 
+        text: "Seasonal changes affect my immunity", 
         score: { performance: 1, wellness: 3, stress: 1, digestive: 2 } 
       },
       { 
-        id: 'rarely', 
-        text: 'Rarely, but want to maintain good health', 
+        id: "rarely", 
+        text: "Rarely, but want to maintain good health", 
         score: { performance: 3, wellness: 3, stress: 1, digestive: 1 } 
       }
     ]
@@ -179,7 +179,7 @@ const resultMapping: Record<string, ResultData> = {
   wellness: {
     title: "Daily Wellness Booster",
     subtitle: "Comprehensive health support for everyone",
-    description: "A perfectly balanced formulation that supports overall wellness. This blend contains essential herbs and nutrients that boost immunity, improve vitality, and maintain your body's natural balance for sustained everyday wellness.",
+    description: "A perfectly balanced formulation that supports overall wellness. This blend contains essential herbs and nutrients that boost immunity, improve vitality, and maintain your body&aposs natural balance for sustained everyday wellness.",
     benefits: ["Complete Immunity Boost", "Enhanced Daily Vitality", "Natural Body Balance", "Consistent Energy Levels"],
     icon: <Heart className="w-6 h-6" />,
     color: "from-emerald-600 to-emerald-800",
@@ -595,7 +595,7 @@ const SaabhiQuiz: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
-                Based on your responses, here's your personalized recommendation
+                Based on your responses, here&aposs your personalized recommendation
               </motion.p>
             </motion.div>
 
