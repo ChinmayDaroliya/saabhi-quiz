@@ -1,18 +1,13 @@
-import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
-import  QuizLoading  from '@/components/QuizLoading'
-
-
-// Dynamically import the quiz component with SSR disabled for better performance
-const SaabhiQuiz = dynamic(() => import('../components/SaabhiQuiz'), {
-  loading: () => <QuizLoading />,
-  ssr: false // Disable server-side rendering for this component
-})
+import { Suspense } from 'react';
+import QuizLoading  from './QuizLoading';
+// import SaabhiQuizClient from './SaabhiQuizClient';
+import SaabhiQuiz from '@/components/SaabhiQuiz';
 
 export default function Home() {
   return (
     <Suspense fallback={<QuizLoading />}>
-      <SaabhiQuiz />
+      {/* <SaabhiQuizClient /> */}
+      <SaabhiQuiz/>
     </Suspense>
-  )
+  );
 }

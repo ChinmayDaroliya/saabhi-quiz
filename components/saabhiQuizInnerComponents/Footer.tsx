@@ -20,8 +20,8 @@ export const Footer: React.FC<{
           animate={{ scale: 1 }}
           transition={{ delay: showResult ? 2.3 : 1.1, type: "spring" }}
         >
-          <div className="w-10 h-10 lg:w-16 lg:h-16 bg-white/20 rounded-full flex items-center justify-center mr-3">
-            <Leaf className="w-5 h-5 lg:w-8 lg:h-8" />
+          <div className="w-10 h-10 lg:w-16 lg:h-16 bg-white/20 rounded-full flex items-center justify-center mr-3 lg:-translate-x-3 -translate-x-3">
+            <Leaf className="w-5 h-5 lg:w-8 lg:h-8 " />
           </div>
           <div>
             <span className="text-lg md:text-2xl lg:text-3xl font-bold">Saabhi Wellness</span>

@@ -4,26 +4,26 @@ import {QuizQuestion } from "@/interfaces/Interface";
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "What&apos;s your current lifestyle like?",
+    question: "What's your current lifestyle like?",
     options: [
       { 
         id: "active", 
-        text: "Very active - I exercise regularly and eat healthy", 
+        text: "Very active - ", 
         score: { performance: 3, wellness: 2, stress: 1, digestive: 1 } 
       },
       { 
         id: "moderate", 
-        text: "Moderately active - I try to stay healthy but could do better", 
+        text: "Moderately active - ", 
         score: { performance: 2, wellness: 3, stress: 2, digestive: 2 } 
       },
       { 
         id: "sedentary", 
-        text: "Mostly sedentary - I have a desk job and limited physical activity", 
+        text: "Mostly sedentary - ", 
         score: { performance: 1, wellness: 1, stress: 3, digestive: 2 } 
       },
       { 
         id: "stressed", 
-        text: "High stress lifestyle with irregular eating and sleep patterns", 
+        text: "High stress lifestyle ", 
         score: { performance: 1, wellness: 1, stress: 3, digestive: 3 } 
       }
     ]

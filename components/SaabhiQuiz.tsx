@@ -95,25 +95,25 @@ const SaabhiQuiz: React.FC<SaabhiQuizProps> = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 ">
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-sm border-b border-green-100 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-4 lg:py-6">
-          <div className="flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-4 lg:py-6 lg:translate-x-1 translate-x-1">
+          <div className="flex items-center justify-between ">
             <motion.div 
               className="flex items-center space-x-3"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center shadow-lg lg:translate-x-1">
-                <Leaf className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white" />
+              <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center shadow-lg lg:translate-x-20">
+                <Leaf className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white " />
               </div>
               <div>
-                <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-green-800 lg:translate-x-2">
+                <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-green-800 lg:translate-x-22 translate-x-2">
                   Saabhi Wellness
                 </h1>
-                <p className="text-xs md:text-sm lg:text-base text-green-600 font-medium lg:translate-x-2">
+                <p className="text-xs md:text-sm lg:text-base text-green-600 font-medium lg:translate-x-22 translate-x-2">
                   सभी Ke Liye
                 </p>
               </div>
@@ -126,10 +126,10 @@ const SaabhiQuiz: React.FC<SaabhiQuizProps> = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <p className="text-sm lg:text-base text-green-600 font-medium">
+                <p className="text-sm lg:text-base text-green-600 font-medium -translate-x-3">
                   Question {currentQuestion + 1} of {quizQuestions.length}
                 </p>
-                <div className="mt-1 lg:mt-2">
+                <div className="mt-1 lg:mt-2 -translate-x-3 ">
                   <ProgressBar current={currentQuestion} total={quizQuestions.length} />
                 </div>
               </motion.div>

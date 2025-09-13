@@ -16,14 +16,14 @@ export const QuizSection: React.FC<{
   return (
     <motion.main 
       key="quiz"
-      className="relative w-full flex items-center translate-y-2 justify-center px-4 lg:px-6 pb-32"
+      className="relative w-full flex items-center translate-y-3 justify-center px-4 lg:px-6 pb-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       <motion.div 
-        className="bg-white/80 backdrop-blur-sm rounded-2xl lg:rounded-3xl shadow-xl border border-green-100 flex justify-center w-full max-w-5xl max-h-[65vh] overflow-y-auto"
+        className="bg-white/80 backdrop-blur-sm rounded-2xl lg:rounded-3xl shadow-xl border border-green-100 flex justify-center w-full max-w-5xl max-h-[65vh] overflow-y-auto "
         layoutId="main-card"
       >
         <div className="p-6 md:p-8 lg:p-16">
@@ -39,14 +39,16 @@ export const QuizSection: React.FC<{
             <AyurvedicBottle className="opacity-50" animate={currentQuestion === quizQuestions.length - 1} />
           </motion.div>
 
+
           <AnimatePresence mode="wait">
             <motion.div
               key={currentQuestion}
-              className="text-center mb-8 lg:mb-12"
+              // className="text-center mb-8 lg:mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
+              className='flex flex-col text-center mb-8 lg:mb-12 max-w-4xl mx-auto '
             >
               <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-green-800 mb-4 lg:mb-6 leading-tight">
                 {quizQuestions[currentQuestion]?.question}
@@ -82,7 +84,7 @@ export const QuizSection: React.FC<{
 
           {/* Navigation buttons */}
           <motion.div 
-            className="flex justify-between items-center mt-6 lg:mt-12 max-w-4xl mx-auto"
+            className="flex justify-between items-center mt-6 lg:mt-12 max-w-4xl mx-auto "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -90,7 +92,7 @@ export const QuizSection: React.FC<{
             <button
               onClick={goToPreviousQuestion}
               disabled={currentQuestion === 0 || isTransitioning}
-              className={`flex items-center space-x-2 px-4 lg:px-6 py-2 lg:py-3 rounded-xl transition-all duration-300 ${
+              className={`flex items-center space-x-2 px-4 lg:px-6 py-2 lg:py-3 rounded-xl transition-all duration-300  ${
                 currentQuestion === 0 
                   ? 'opacity-0 pointer-events-none' 
                   : 'text-green-600 hover:text-green-800 hover:bg-green-50'
@@ -104,7 +106,7 @@ export const QuizSection: React.FC<{
               {currentQuestion + 1} / {quizQuestions.length}
             </div>
 
-            <div className="w-16 lg:w-20"></div> {/* Spacer for balance */}
+             <div className="w-16 lg:w-20"></div> {/*Spacer for balance */}
           </motion.div>
         </div>
       </motion.div>
