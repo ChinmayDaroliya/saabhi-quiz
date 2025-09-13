@@ -12,11 +12,9 @@ import { Footer } from './saabhiQuizInnerComponents/Footer';
 import { ResultSection } from './saabhiQuizInnerComponents/ResultSection';
 import { QuizSection } from './saabhiQuizInnerComponents/QuizSection';
 
-// Type for component props (empty in this case)
-interface SaabhiQuizProps {}
 
 // Main Quiz Component with optimized structure
-const SaabhiQuiz: React.FC<SaabhiQuizProps> = () => {
+const SaabhiQuiz: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});

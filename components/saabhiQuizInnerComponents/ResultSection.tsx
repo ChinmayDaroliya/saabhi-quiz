@@ -1,10 +1,11 @@
 import { Star, CheckCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { AyurvedicBottle } from '../AyurvedicBottle';
+import { ResultData } from '@/interfaces/Interface';
+
 
 // Extracted Result Section Component
 export const ResultSection: React.FC<{
-  result: any;
+  result: ResultData;
   resetQuiz: () => void;
 }> = ({ result, resetQuiz }) => {
   return (
