@@ -58,8 +58,8 @@ export interface ResultData {
   title: string;
   subtitle: string;
   description: string;
-  benefits: string[];
-  icon: React.ReactElement | string; // you can keep it as string if using emojis
-  color: string;
-  image: string;
+  // benefits: string[];
+  // icon: React.ReactElement | string; // you can keep it as string if using emojis
+  // color: string;
+  // image: string;
 }
