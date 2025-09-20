@@ -23,19 +23,7 @@ export const ResultSection: React.FC<{
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <motion.div 
-            className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 bg-green-100 rounded-full mb-3 sm:mb-4 lg:mb-8 shadow-lg"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ 
-              type: "spring",
-              stiffness: 260,
-              damping: 20,
-              delay: 0.3
-            }}
-          >
-            <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12 text-green-600" />
-          </motion.div>
+          
           <motion.h2 
             className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-green-800 mb-1 sm:mb-2 lg:mb-4 px-2"
             initial={{ opacity: 0, y: 20 }}
@@ -44,14 +32,7 @@ export const ResultSection: React.FC<{
           >
             Your Perfect Match!
           </motion.h2>
-          <motion.p 
-            className="text-green-600 text-sm sm:text-base md:text-lg lg:text-xl px-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-          >
-            Based on your responses, here your personalized recommendation
-          </motion.p>
+         
         </motion.div>
 
         <motion.div 
@@ -124,30 +105,7 @@ export const ResultSection: React.FC<{
             </motion.p>
 
             <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 mb-6 sm:mb-8 lg:mb-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 1.3 }}
-              >
-                <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-green-800 mb-3 sm:mb-4 lg:mb-6 flex items-center">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 text-amber-500" />
-                  Key Benefits
-                </h4>
-                <ul className="space-y-2 sm:space-y-3 lg:space-y-4">
-                  {result?.benefits.map((benefit: string, index: number) => (
-                    <motion.li 
-                      key={index} 
-                      className="flex items-start text-green-700"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 1.4 + (index * 0.1) }}
-                    >
-                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 mr-2 sm:mr-3 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-tight">{benefit}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
+              
 
               <motion.div 
                 className="text-center"
@@ -160,17 +118,7 @@ export const ResultSection: React.FC<{
                   <h5 className="text-green-800 font-bold text-sm sm:text-lg lg:text-xl mb-1 sm:mb-2 lg:mb-3">
                     Premium Ayurvedic Formula
                   </h5>
-                  <p className="text-green-600 mb-2 sm:mb-3 lg:mb-4 text-xs sm:text-sm lg:text-base">
-                    Crafted with traditional wisdom and modern precision
-                  </p>
-                  <div className="flex justify-center space-x-0.5 sm:space-x-1 mb-2 sm:mb-3 lg:mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="w-2.5 h-2.5 sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-amber-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-xs lg:text-sm text-green-500 font-medium">
-                    ⭐ Trusted by thousands of customers
-                  </p>
+                 
                 </div>
               </motion.div>
             </div>
@@ -192,30 +140,14 @@ export const ResultSection: React.FC<{
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               
-              <motion.button
-                onClick={resetQuiz}
-                className="w-[200px] sm:w-auto px-6 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-3 md:py-4 lg:py-5 border-2 border-green-600 text-green-600 font-semibold rounded-lg sm:rounded-xl lg:rounded-2xl hover:bg-green-50 transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-sm md:text-base lg:text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>Retake Quiz</span>
-              </motion.button>
+              
             </motion.div>
 
-            {/* Social sharing hint */}
-            <motion.div 
-              className="text-center pt-4 sm:pt-6 lg:pt-8 border-t border-green-100"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.0 }}
-            >
-              <p className="text-green-600 text-xs sm:text-sm lg:text-base mb-2 px-4">
-                💡 Found this helpful? Share with friends who care about wellness!
-              </p>
-            </motion.div>
+            
           </div>
         </motion.div>
       </div>
     </motion.main>
   );
 };
+

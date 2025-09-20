@@ -1,54 +1,42 @@
-import { motion} from 'framer-motion';
-import {Leaf } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-// Enhanced Loading Screen Component with better animations
 export const LoadingScreen: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center px-4">
+  //
+  <div className="min-h-screen  bg-gradient-to-br from-green-50 to-emerald-50  flex items-center justify-center px-4">
     <motion.div 
       className="text-center"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="relative mb-8">
+      <div className="relative mb-8 w-20 h-20 mx-auto">
+        {/* Rotating green loader ring */}
         <motion.div 
-          className="w-20 h-20 mx-auto bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center"
-          animate={{ 
-            scale: [1, 1.1, 1],
-            rotate: [0, 360] 
-          }}
-          transition={{ 
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut" 
-          }}
-        >
-          <Leaf className="w-10 h-10 text-white" />
-        </motion.div>
-        <motion.div 
-          className="absolute inset-0 w-20 h-20 mx-auto border-4 border-green-200 rounded-full border-t-green-600"
+          className="absolute inset-0 rounded-full border-4 border-t-[#367268] border-r-transparent border-b-transparent border-l-transparent"
           animate={{ rotate: 360 }}
-          transition={{ 
-            duration: 1,
-            repeat: Infinity,
-            ease: "linear" 
-          }}
+          transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
         />
+
+        {/* Stable logo perfectly centered */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center">
+            <img 
+              src="saabhi_circular_logo.svg" 
+              alt="saabhi logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+        </div>
       </div>
+
+      {/* Loading Text */}
       <motion.h2 
-        className="text-2xl md:text-3xl font-bold text-green-800 mb-2"
+        className="text-2xl md:text-3xl font-bold text-[#367268] mb-2"
         animate={{ opacity: [0.5, 1, 0.5] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        Saabhi Wellness
+        SAABHI WELLNESS
       </motion.h2>
-      <motion.p 
-        className="text-green-600 text-lg"
-        animate={{ opacity: [0.7, 1, 0.7] }}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
-      >
-        Finding your perfect wellness solution...
-      </motion.p>
     </motion.div>
   </div>
 );

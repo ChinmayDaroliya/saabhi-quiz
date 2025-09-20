@@ -43,6 +43,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#10b981" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/saabhi_circular_logo.svg" type="image/png" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />

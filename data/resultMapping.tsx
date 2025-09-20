@@ -5,40 +5,60 @@ import { ResultData } from "@/interfaces/Interface";
 
 // Enhanced result mapping
 export const resultMapping: Record<string, ResultData> = {
-  performance: {
-    title: "Enhanced Performance Formula",
-    subtitle: "Perfect for your active lifestyle",
-    description: "Our premium blend is designed for individuals who push their limits. With natural adaptogens and energy boosters, this formula supports sustained performance, faster recovery, and enhanced physical stamina throughout your day.",
-    benefits: ["Sustained Natural Energy", "Faster Post-Workout Recovery", "Enhanced Physical Stamina", "Improved Mental Focus"],
-    icon: <Zap className="w-6 h-6"/>,
+ toxins: {
+    title: "Tox Out Juice — Reset & Glow",
+    subtitle: "Detox naturally, restore energy & skin",
+    description: "Your lifestyle shows that toxins may be silently piling up — late nights, frequent drinks, and oily foods can affect your skin and energy. 🌙✨ Saabhi’s Tox Out Juice is the natural way to reset your body, cleanse your liver, and bring back that inner glow. 💚 Try it today: Tox Out Juice",
+    benefits: [
+      "Natural Liver Detox",
+      "Restore Energy & Vitality",
+      "Gentle Digestion Support",
+      "Clear, Glowing Skin"
+    ],
+    icon: "🧃",
     color: "from-green-600 to-green-800",
-    image: "🌿💪"   
+    image: "🌙✨"
   },
-  wellness: {
-    title: "Daily Wellness Booster",
-    subtitle: "Comprehensive health support for everyone",
-    description: "A perfectly balanced formulation that supports overall wellness. This blend contains essential herbs and nutrients that boost immunity, improve vitality, and maintain your body&aposs natural balance for sustained everyday wellness.",
-    benefits: ["Complete Immunity Boost", "Enhanced Daily Vitality", "Natural Body Balance", "Consistent Energy Levels"],
-    icon: <Heart className="w-6 h-6" />,
+  balanced: {
+    title: "Tox Out Juice — Stay Ahead",
+    subtitle: "Support energy, digestion, and glow",
+    description: "You’re already living a balanced lifestyle 🙌 But even the healthiest bodies collect hidden toxins from stress and environment. Tox Out Juice helps you stay ahead — keeping your energy levels high, digestion smooth, and glow unstoppable. 💚 Check it out: Tox Out Juice",
+    benefits: [
+      "Maintain Energy Levels",
+      "Support Digestion",
+      "Protect Skin Health",
+      "Boost Overall Wellness"
+    ],
+    icon: "💚",
     color: "from-emerald-600 to-emerald-800",
-    image: "🍃❤️"
+    image: "✨💚"
   },
-  stress: {
-    title: "Stress Relief & Calm Energy",
-    subtitle: "Balance your mind, energize your body",
-    description: "Specially crafted for modern lifestyles, this formula combines calming herbs with natural energizers. It helps reduce daily stress, improve mental clarity, and provides sustainable energy without jitters or crashes.",
-    benefits: ["Natural Stress Reduction", "Enhanced Mental Clarity", "Calm, Steady Energy", "Improved Sleep Quality"],
-    icon: <Leaf className="w-6 h-6" />,
+  fun: {
+    title: "Tox Out Juice — Gentle Detox",
+    subtitle: "Balance your digestion & skin",
+    description: "You’ve got a fun, active vibe 🎉 but your late nights and foodie habits may cause toxin build-up. Tox Out Juice is designed to gently detoxify, balance your digestion, and keep your skin fresh — so you can enjoy life without the after-effects. 💚 Try it here: Tox Out Juice",
+    benefits: [
+      "Gentle Detoxification",
+      "Balance Digestion",
+      "Support Skin Health",
+      "Enjoy Life Freely"
+    ],
+    icon: "🎉",
     color: "from-teal-600 to-teal-800",
-    image: "🧘‍♀️✨"
+    image: "🎉💚"
   },
-  digestive: {
-    title: "Digestive Harmony Blend",
-    subtitle: "Restore your gut health naturally",
-    description: "A targeted solution for digestive wellness. This blend contains time-tested Ayurvedic herbs that support healthy digestion, reduce bloating, improve gut health, and promote better nutrient absorption for overall vitality.",
-    benefits: ["Improved Digestion", "Reduced Bloating", "Enhanced Gut Health", "Better Nutrient Absorption"],
-    icon: <Star className="w-6 h-6" />,
+  active: {
+    title: "Tox Out Juice — Active Glow",
+    subtitle: "Cleanse, restore, and energize",
+    description: "You’re active and health-conscious, but your skin struggles show toxins need flushing out. Tox Out Juice works from within to cleanse, restore balance, and bring back that natural glow 🌸. Perfect partner for your lifestyle! 💚 Grab it: Tox Out Juice",
+    benefits: [
+      "Cleanse Naturally",
+      "Restore Skin Balance",
+      "Boost Energy",
+      "Support Active Lifestyle"
+    ],
+    icon: "💪",
     color: "from-amber-600 to-amber-800",
-    image: "🌱🌟"
+    image: "🌸💚"
   }
 };

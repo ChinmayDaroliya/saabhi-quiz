@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { QuizOption } from '@/interfaces/Interface';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 
 // Extracted Quiz Option Button Component
 export const QuizOptionButton: React.FC<{
@@ -14,35 +14,83 @@ export const QuizOptionButton: React.FC<{
   return (
     <motion.button
       onClick={() => handleAnswer(questionId, option.id, option.score)}
-      className={`p-4 md:p-6 lg:p-8 text-left rounded-xl lg:rounded-2xl border-2 transition-all duration-300 group relative overflow-hidden
-        ${isSelected
-          ? 'border-green-500 bg-green-50 shadow-lg scale-[1.02]' 
-          : 'border-green-200 bg-white/50 hover:border-green-300 hover:bg-green-50 hover:scale-[1.01] hover:shadow-md'
-        }`}
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
       disabled={isTransitioning}
+      className={`
+        group
+        w-full relative overflow-hidden
+        bg-white/90 backdrop-blur-sm
+        border-2 rounded-2xl
+        transition-all duration-300
+        active:scale-95
+        focus:outline-none focus:ring-4
+        h-[50px]
+        translate-y-4
+        
+        ${isSelected 
+          ? 'border-[#367268] bg-[#367268] ring-2 ring-green-200/50 shadow-lg' 
+          : 'border-gray-200/80 hover:border-[#367268] hover:bg-white shadow-md hover:shadow-lg'
+        }
+        ${isTransitioning ? 'opacity-70 cursor-pointer' : 'cursor-pointer'}
+      `}
+      whileHover={{ scale: isTransitioning ? 1 : 1.02 }}
+      whileTap={{ scale: isTransitioning ? 1 : 0.98 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ 
+        opacity: 1, 
+        y: 0,
+        transition: { 
+          delay: index * 0.1,
+          duration: 0.4
+        }
+      }}
+      exit={{ opacity: 0, y: -10 }}
+      layout
     >
-      <div className="flex items-center justify-between relative z-10">
-        <div className="flex-1 pr-4">
-          <p className="text-green-800 font-medium group-hover:text-green-900 transition-colors leading-relaxed text-sm md:text-base lg:text-lg">
+      
+      {/* Background gradient for selected state */}
+      {isSelected && (
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-br from-green-50/40 to-emerald-50/20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        />
+      )}
+      
+      <div className="flex items-center justify-between relative z-10 gap-x-4 px-2" >
+        <div className="text-left">
+          <p className={`
+            text-lg md:text-xl lg:text-xl
+            font-medium leading-tight
+            translate-x-5
+            ${isSelected ? 'text-[#367268]' : 'text-gray-600 group-hover:text-[#367268]'}
+          `}>
             {option.text}
           </p>
         </div>
+        
         <motion.div
-          initial={{ x: 0 }}
-          whileHover={{ x: 5 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          animate={{ 
+            x: isSelected ? 2 : 0,
+            opacity: isSelected ? 1 : 0.7
+          }}
+          transition={{ duration: 0.2 }}
         >
-          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-green-500 group-hover:text-green-700 transition-colors" />
+          <ArrowRight className={`
+            w-4 h-4 md:w-6 md:h-6 lg:w-6 lg:h-6
+            flex-shrink-0
+            -translate-x-5
+            ${isSelected ? 'text-[#367268]' : 'text-gray-600 group-hover:text-[#367268]'}
+          `} />
         </motion.div>
       </div>
       
-      {/* Hover effect background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-green-400/0 to-green-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      {/* Subtle hover effect */}
+      <motion.div 
+        className="absolute inset-0 bg-[#367268]"
+        initial={{ x: '-100%' }}
+        whileHover={{ x: '100%' }}
+        transition={{ duration: 0.6 }}
+      />
     </motion.button>
   );
 };
-
-

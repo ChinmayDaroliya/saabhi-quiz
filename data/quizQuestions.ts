@@ -2,135 +2,58 @@ import {QuizQuestion } from "@/interfaces/Interface";
 
 // Quiz Data Structure with enhanced questions
 export const quizQuestions: QuizQuestion[] = [
-  {
+
+
+   {
     id: 1,
-    question: "What's your current lifestyle like?",
+    question: "Workout Vibes?",
     options: [
-      { 
-        id: "active", 
-        text: "Very active - ", 
-        score: { performance: 3, wellness: 2, stress: 1, digestive: 1 } 
-      },
-      { 
-        id: "moderate", 
-        text: "Moderately active - ", 
-        score: { performance: 2, wellness: 3, stress: 2, digestive: 2 } 
-      },
-      { 
-        id: "sedentary", 
-        text: "Mostly sedentary - ", 
-        score: { performance: 1, wellness: 1, stress: 3, digestive: 2 } 
-      },
-      { 
-        id: "stressed", 
-        text: "High stress lifestyle ", 
-        score: { performance: 1, wellness: 1, stress: 3, digestive: 3 } 
-      }
+      { id: "daily-hustler", text: "Daily Hustler 🏋️‍♂️", score: { lifestyle: 4 } },
+      { id: "3-4-times", text: "3-4 Times a Week 💪", score: { lifestyle: 3 } },
+      { id: "weekend-warrior", text: "Weekend Warrior ⚡", score: { lifestyle: 2 } },
+      { id: "rarely", text: "Rarely/Almost Never 😅", score: { lifestyle: 1 } },
     ]
   },
   {
     id: 2,
-    question: "What&apos;s your primary health goal?",
+    question: "Bedtime Mood?",
     options: [
-      { 
-        id: "energy", 
-        text: "Boost energy and vitality naturally", 
-        score: { performance: 3, wellness: 2, stress: 2, digestive: 1 } 
-      },
-      { 
-        id: "stress", 
-        text: "Reduce stress and improve mental clarity", 
-        score: { performance: 1, wellness: 2, stress: 3, digestive: 1 } 
-      },
-      { 
-        id: "digestion", 
-        text: "Improve digestion and gut health", 
-        score: { performance: 1, wellness: 2, stress: 1, digestive: 3 } 
-      },
-      { 
-        id: "overall", 
-        text: "Overall wellness and immunity boost", 
-        score: { performance: 2, wellness: 3, stress: 2, digestive: 2 } 
-      }
+      { id: "early-snoozer", text: "Early Snoozer 🌙", score: { sleep: 4 } },
+      { id: "11pm", text: "Around 11 PM 😴", score: { sleep: 3 } },
+      { id: "midnight-owl", text: "Midnight Owl 🦉", score: { sleep: 2 } },
+      { id: "2am-scroller", text: "2 AM Scroller 📱", score: { sleep: 1 } },
     ]
   },
   {
     id: 3,
-    question: "How do you usually feel by afternoon?",
+    question: "Sip or Skip? (Alcohol)",
     options: [
-      { 
-        id: "energetic", 
-        text: "Still energetic and focused", 
-        score: { performance: 3, wellness: 2, stress: 1, digestive: 1 } 
-      },
-      { 
-        id: "tired", 
-        text: "Slightly tired but manageable", 
-        score: { performance: 2, wellness: 2, stress: 2, digestive: 2 } 
-      },
-      { 
-        id: "drained", 
-        text: "Drained and need caffeine boost", 
-        score: { performance: 1, wellness: 1, stress: 3, digestive: 2 } 
-      },
-      { 
-        id: "sluggish", 
-        text: "Sluggish with digestive discomfort", 
-        score: { performance: 1, wellness: 1, stress: 2, digestive: 3 } 
-      }
+      { id: "never", text: "Never Touched 🚫", score: { alcohol: 4 } },
+      { id: "occasionally", text: "Occasionally 🍷", score: { alcohol: 3 } },
+      { id: "weekends-only", text: "Weekends Only 🎉", score: { alcohol: 2 } },
+      { id: "frequent", text: "Frequent Sipper 🥂", score: { alcohol: 1 } },
     ]
   },
   {
     id: 4,
-    question: "What&apos;s your preferred way to take supplements?",
+    question: "Foodie Habits? (Eating Out)",
     options: [
-      { 
-        id: "tablets", 
-        text: "Tablets - Quick and convenient", 
-        score: { performance: 2, wellness: 2, stress: 2, digestive: 2 } 
-      },
-      { 
-        id: "juice", 
-        text: "Natural juices - I enjoy the taste", 
-        score: { performance: 2, wellness: 3, stress: 1, digestive: 3 } 
-      },
-      { 
-        id: "oils", 
-        text: "Oils for topical application", 
-        score: { performance: 1, wellness: 3, stress: 2, digestive: 1 } 
-      },
-      { 
-        id: "mixed", 
-        text: "I&apos;m open to trying different forms", 
-        score: { performance: 2, wellness: 2, stress: 2, digestive: 2 } 
-      }
+      { id: "hardly", text: "Hardly Ever 🍲", score: { diet: 4 } },
+      { id: "once-week", text: "Once a Week 🍕", score: { diet: 3 } },
+      { id: "2-3-times", text: "2-3 Times a Week 🍔", score: { diet: 2 } },
+      { id: "cant-resist", text: "Can’t Resist! 🍟", score: { diet: 1 } },
     ]
   },
   {
     id: 5,
-    question: "When do you typically experience health issues?",
+    question: "Skin Story (Acne)?",
     options: [
-      { 
-        id: "morning", 
-        text: "Morning sluggishness and low energy", 
-        score: { performance: 1, wellness: 2, stress: 2, digestive: 3 } 
-      },
-      { 
-        id: "work-stress", 
-        text: "During stressful work periods", 
-        score: { performance: 2, wellness: 1, stress: 3, digestive: 1 } 
-      },
-      { 
-        id: "seasonal", 
-        text: "Seasonal changes affect my immunity", 
-        score: { performance: 1, wellness: 3, stress: 1, digestive: 2 } 
-      },
-      { 
-        id: "rarely", 
-        text: "Rarely, but want to maintain good health", 
-        score: { performance: 3, wellness: 3, stress: 1, digestive: 1 } 
-      }
+      { id: "clear", text: "Clear Always ✨", score: { skin: 4 } },
+      { id: "rare-spots", text: "Rare Spots 🌸", score: { skin: 3 } },
+      { id: "frequent-breakouts", text: "Frequent Breakouts 😬", score: { skin: 2 } },
+      { id: "major-struggle", text: "Major Skin Struggle 😓", score: { skin: 1 } },
     ]
   }
 ];
+
 
